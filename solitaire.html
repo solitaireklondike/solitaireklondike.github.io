@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no" />
+    <title>Solitaire</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+    <div class="curtain" id="curtain">
+        <img class="resumeImg" src="image/resume.png" onclick="timetoggle()">
+    </div>
+
+    <div id="top">
+        <div class="toptitle"><img class="toptitleImg" src="image/topTitle.png"></div>
+        <div class="newButton" id="newButton" onclick="reset()" ><span class="buttonLabel">new game</span></div>
+        <div class="stopButton" id="stopButton" onclick="timetoggle()" ><img class="pauseImg" src="image/pause.png"></div>
+    </div>
+
+    <div class="menu" id="menu">
+        <center>
+            <div class="maintitle"><img class="maintitleImg" src="image/mainTitle.png"></div>
+            <div class="StartButton_out" id="StartButton" onclick="startBtn()" >
+                <div class="StartButton_in">
+                    <span class="startLabel">play</span>
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <div id="deskTop">
+        <canvas id="canvasBack"></canvas>
+        <canvas id="canvasFont"></canvas>
+    </div>
+
+    <div class="footer" id="footer">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="timer" >Time: <span class="timerLabal" id="timer">00:00:00</span></div>
+    </div>
+
+    <div id="messageBox">
+        <center>
+            <img class="blueFire" src="image/blue.gif">
+            <div id="message">
+                Congratulations!
+            </div>
+            <img class="redFire" src="image/red.gif">
+
+            <div id="result">
+                ff
+            </div>
+
+            <div id="content">
+                ff
+            </div>
+
+            <div id="messageBoxConfirm">OK</div>
+        </center>
+    </div>
+
+    <div id="cmdBox">
+        <input id="cmd" type="text" />
+    </div>
+
+    <script src="js/game.js"></script>
+
+</body>
+</html>

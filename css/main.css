@@ -1,0 +1,256 @@
+/*body { 
+            margin: 0;
+            padding: 0; 
+            font-family: Consolas 'Microsoft YaHei'; 
+            height: 100%; 
+            background-image: url( "../image/tail.png" );
+            background-repeat: repeat;
+            overflow: hidden; 
+        }
+*/
+body {
+    margin: 0;
+    padding: 0; 
+    background: #1f513b;
+    background: linear-gradient(to top , #1f513b, #000) fixed;
+    font-family: 'Lato', sans-serif; 
+    color: white;
+    height: 100%;
+    overflow: hidden;
+}
+
+#top{
+    position: absolute; 
+    width: 100%; 
+    height: 32px; 
+    background-color: #000; 
+    z-index: 5; 
+    padding: 9px;
+}
+
+#deskTop { 
+    position: absolute; 
+    top: 50px;
+    overflow: hidden; 
+    box-sizing: border-box; 
+    /*
+    left: 50%;
+    transform: translateX(-50%);
+    */
+    
+}
+
+.curtain{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    background:#fff;
+    opacity: 0.5;
+    z-index: 999;
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.maintitleImg{
+    height: 240px;
+}
+
+.StartButton_out{
+    border-radius: 12px;
+    text-align: center;
+    background-repeat: repeat;
+    height: 50px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 4px 0px black inset;      
+    padding: 5px; 
+}
+
+.StartButton_out:hover{
+    background-color: #1f513b;
+}
+
+/*
+.StartButton_in{
+    border-radius: 5px;
+    text-align: center;
+    background-color: #0B610B;
+    height: 50px;
+    box-shadow: 0px 0px 4px black;        
+}
+*/
+
+.startLabel{
+    font-size: 30px;
+    line-height: 40px;
+    color: #fff;
+    cursor: pointer; 
+}
+
+.toptitle{
+
+}
+
+.toptitleImg{
+    position: absolute;
+    height: 32px;
+}
+
+.pauseImg{
+    margin: 10px;
+    height: 10px;
+}
+
+.resumeImg{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
+
+.stopButton{
+    right: 30px;
+    position: absolute; 
+    width: 30px;
+    height: 30px;
+    border-radius:  6px;
+    text-align: center;
+    border: solid 1px #eee;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.newButton{
+    right: 70px;
+    position: absolute; 
+    width: 100px;
+    height: 30px;
+    border-radius:  6px;
+    text-align: center;
+    border: solid 1px #eee;
+    display: none;
+    cursor: pointer; 
+}
+
+.buttonLabel{
+    color: #eee;
+    font-size: 14px;
+    text-align: middle;
+    line-height: 26px; 
+}
+
+.timer{
+    text-align: right;
+    right: 0px;
+}
+
+.timerLabal{
+    color: #eee;
+}
+
+.score{
+    right: 0px;
+    color: #eee;
+}
+
+.footer{
+    position: absolute;
+    display: none;
+    width: 100%; 
+    height: 30px; 
+    z-index: 1; 
+    color: #eee;
+    bottom: 0px;
+}
+
+.footer div { 
+    width: 50%; 
+    line-height: 30px; 
+    float: left; 
+    padding: 0 10px; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+.blueFire{
+    display: inline-block;
+    width: 40px;
+}
+
+.redFire{
+    display: inline-block;
+    width: 40px;
+}
+
+#canvasBack { position: absolute; z-index: 2; left: 0; cursor: pointer; }
+#canvasFont { position: absolute; z-index: 3; cursor: move; }
+
+#messageBox { 
+    position: fixed; 
+    z-index: 5; 
+    width: 300px; 
+    height: 200px; 
+    background-color: #fff; 
+    color: #aaa; 
+    padding: 20px 10px 10px 10px; 
+    box-shadow: 0px 0px 15px black;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0; 
+    box-sizing: border-box; 
+    display: none;
+}
+
+#message { 
+    display: inline-block;
+    line-height: 35px; 
+    height: 40px; 
+    overflow: hidden; 
+
+    margin-right: 3px; 
+    margin-left: 3px;
+}
+
+#result{
+    margin: 5px;
+    font-size: 30px;
+    text-align: center;  
+}
+
+#content{
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;    
+}
+
+#messageBoxConfirm { 
+    width: 60px; 
+    height: 30px; 
+    line-height: 40px; 
+    border: 2px solid white; 
+    line-height: 26px; 
+    text-align: center; 
+    box-sizing: border-box; 
+    position: absolute; 
+    right: 20px; 
+    bottom: 20px;
+
+    border-radius: 6px;
+    text-align: center;
+    border: solid 1px #aaa;
+
+    cursor: pointer; 
+}
